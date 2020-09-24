@@ -2,8 +2,8 @@ name: AUR
 
 on:
   push:
-    tags:
-      - '*'
+    paths:
+      - PKGBUILD
 
 jobs:
   publish:
