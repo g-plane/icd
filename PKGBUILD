@@ -10,6 +10,8 @@ source=("https://github.com/g-plane/$pkgname/archive/v$pkgver.tar.gz")
 sha1sums=('fd9a5fdf17d2b65058e44166bb2e125158e9f549')
 license=('MIT')
 depends=('zsh')
+optdepends=('fzy'
+    'ripgrep')
 
 package() {
     cd $srcdir/$pkgname-$pkgver/
