@@ -21,7 +21,7 @@ icd() {
 
   if [[ $1 != "" ]]; then
     if [[ -d $1 ]]; then
-      ICD_SELECTED=$1
+      ICD_SELECTED=$(realpath $1)
     else
       ICD_SELECTED=$(cat $ICD_HISTORY_FILE | $ICD_FUZZ_TOOL -q $1)
     fi
