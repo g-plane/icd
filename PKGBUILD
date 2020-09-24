@@ -15,7 +15,7 @@ optdepends=('fzy' 'fzf' 'ripgrep' 'grep')
 package() {
     cd $srcdir/$pkgname-$pkgver/
     mkdir -p $pkgdir/usr/share/zsh/scripts/$pkgname/
-    cp $pkgname.plguin.zsh $pkgdir/usr/share/zsh/scripts/$pkgname/
+    cp $pkgname.plugin.zsh $pkgdir/usr/share/zsh/scripts/$pkgname/
 
     mkdir -p $pkgdir/usr/share/licenses/$pkgname/
     cp ./LICENSE $pkgdir/usr/share/licenses/$pkgname/
