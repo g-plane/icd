@@ -2,7 +2,7 @@
 
 Powerful `cd` command with fuzzy-search tool.
 
-It's similar with [enhancd](https://github.com/b4b4r07/enhancd), but more fast and lightweight.
+It's similar with [enhancd](https://github.com/b4b4r07/enhancd), but faster and more lightweight.
 
 ![](./demo.webp)
 
