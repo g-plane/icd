@@ -29,7 +29,7 @@ You just need to install one of them.
 Run this command:
 
 ```
-git clone https://github.com/g-plane/ich.git $ZSH_CUSTOM/plugins
+git clone https://github.com/g-plane/icd.git $ZSH_CUSTOM/plugins
 ```
 
 Then, update your `.zshrc` like this:
