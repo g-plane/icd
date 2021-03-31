@@ -30,7 +30,7 @@ icd() {
   fi
 
   if [[ $ICD_SELECTED != "" ]]; then
-    if [[ $($ICD_GREP_TOOL $ICD_GREP_TOOL_OPTS $ICD_SELECTED $ICD_HISTORY_FILE) != $ICD_SELECTED ]]; then
+    if [[ ! $ICD_SELECTED =~ ^/tmp && $($ICD_GREP_TOOL $ICD_GREP_TOOL_OPTS $ICD_SELECTED $ICD_HISTORY_FILE) != $ICD_SELECTED ]]; then
       echo $ICD_SELECTED >> $ICD_HISTORY_FILE
     fi
     builtin cd $ICD_SELECTED
