@@ -10,12 +10,14 @@ It's similar with [enhancd](https://github.com/b4b4r07/enhancd), but faster and 
 
 First, you need to install [fzf](https://github.com/junegunn/fzf) for fuzzy searching.
 
-Second, you need to install a grep tool. We support:
+Second, you can install [ripgrep](https://github.com/BurntSushi/ripgrep).
+This is optional, but recommended. If don't have ripgrep, you can set `$ICD_GREP` to `grep` like this:
 
-- [ripgrep](https://github.com/BurntSushi/ripgrep) (recommended)
-- grep (available in most OSes)
+```sh
+export ICD_GREP=grep
+```
 
-You just need to install one of them.
+icd will fall back to use `grep` command instead of `rg`.
 
 ## Install
 

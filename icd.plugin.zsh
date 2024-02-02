@@ -1,12 +1,12 @@
-if command -v rg &> /dev/null; then
-  ICD_GREP_TOOL=rg
-  ICD_GREP_TOOL_OPTS="-xN"
-else
-  ICD_GREP_TOOL=grep
-  ICD_GREP_TOOL_OPTS="-x"
-fi
-
 icd() {
+  if [[ $ICD_GREP == "grep" ]]; then
+    local grep_tool="grep"
+    local grep_tool_opts="-x"
+  else
+    local grep_tool="rg"
+    local grep_tool_opts="-xN"
+  fi
+
   local history_file="$HOME/.history.icd"
   if [[ ! -f $history_file ]]; then
     touch $history_file
@@ -23,7 +23,7 @@ icd() {
   fi
 
   if [[ $selected != "" ]]; then
-    if [[ ! $selected =~ ^/tmp && $($ICD_GREP_TOOL $ICD_GREP_TOOL_OPTS $selected $history_file) != $selected ]]; then
+    if [[ ! $selected =~ ^/tmp && $($grep_tool $grep_tool_opts $selected $history_file) != $selected ]]; then
       echo $selected >> $history_file
     fi
     builtin cd $selected
