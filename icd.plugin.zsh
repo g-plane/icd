@@ -1,9 +1,3 @@
-if command -v fzy &> /dev/null; then
-  ICD_FUZZ_TOOL=fzy
-else
-  ICD_FUZZ_TOOL=fzf
-fi
-
 if command -v rg &> /dev/null; then
   ICD_GREP_TOOL=rg
   ICD_GREP_TOOL_OPTS="-xN"
@@ -23,10 +17,10 @@ icd() {
     if [[ -d $1 ]]; then
       ICD_SELECTED=$(realpath $1)
     else
-      ICD_SELECTED=$(cat $ICD_HISTORY_FILE | $ICD_FUZZ_TOOL -q $1)
+      ICD_SELECTED=$(cat $ICD_HISTORY_FILE | fzf --scheme=path --height=20% --layout=reverse --query $1)
     fi
   else
-    ICD_SELECTED=$(cat $ICD_HISTORY_FILE | $ICD_FUZZ_TOOL)
+    ICD_SELECTED=$(cat $ICD_HISTORY_FILE | fzf --scheme=path --height=20% --layout=reverse)
   fi
 
   if [[ $ICD_SELECTED != "" ]]; then
