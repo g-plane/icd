@@ -8,12 +8,7 @@ It's similar with [enhancd](https://github.com/b4b4r07/enhancd), but faster and 
 
 ## Requirements
 
-First, you need to install a fuzzy-search tool. We support:
-
-- [fzy](https://github.com/jhawthorn/fzy) (recommended)
-- [fzf](https://github.com/junegunn/fzf)
-
-You just need to install one of them.
+First, you need to install [fzf](https://github.com/junegunn/fzf) for fuzzy searching.
 
 Second, you need to install a grep tool. We support:
 
