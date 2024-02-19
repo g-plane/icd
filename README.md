@@ -54,6 +54,16 @@ Update your `.zshrc` with following line:
 zplug "g-plane/icd"
 ```
 
+### Fish
+
+Copy `icd.fish` to `~/.config/fish/functions` directory.
+
+Then, add alias to your `~/.config/fish/config/config.fish`:
+
+```shell
+alias cd icd
+```
+
 ## License
 
 MIT License
