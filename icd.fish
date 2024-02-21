@@ -24,7 +24,7 @@ function icd
 
   if test -n $selected
     set -l searched ($grep_tool $grep_tool_opts $selected $history_file)
-    if string match -v '/tmp*' $selected; and test "$searched" != $selected
+    if string match -q -v '/tmp*' $selected; and test "$searched" != $selected
       echo $selected >> $history_file
     end
     builtin cd $selected
