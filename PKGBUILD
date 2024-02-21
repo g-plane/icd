@@ -1,6 +1,6 @@
 # Maintainer: Pig Fang <g-plane@hotmail.com>
 pkgname=icd
-pkgver=0.2.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc='Powerful `cd` command with fuzzy-search tool.'
 
